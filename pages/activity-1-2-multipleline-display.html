@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activity 1-2 Multipleline display · ATX2 Activity Book</title>
+<meta name="description" content="The GLCD screen of ATX2 board size is 128 x 160 dots. Show the character with 5 x 7 dots resolution by 21 characters 16 lines. Developer can define th">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="activity-1-2-multipleline-display">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-6.html">Ch. 6 Hardware experiment of ATX2 board</a> <span>/</span> <a href="activity-1-shows-message-on-the-display-of-t.html">Activity 1 : Shows message on th…</a></nav>
+<article class="doc"><h1>Activity 1-2 Multipleline display</h1>
+<p>The GLCD screen of ATX2 board size is 128 x 160 dots. Show the character with 5 x 7 dots resolution by 21 characters 16 lines. Developer can define the position of each line and column on the screen by using glcd function of the ipst.h library file.</p>
+<p>Additionally, glcd function provides the special characters for setting the display position instead to use the position number. It will be show in the Listing A1-2.</p>
+<p>(A1.2.1) Open the Arduino 1.0.7 software. Create the new sketch file. Type the code following the Listing A1-2. then save as the sketch.</p>
+<pre class="code"><code>#include &lt;ATX2.h&gt;                        // Include main library
+int i;
+void setup()
+{
+  glcdMode(1);                           // Set orientation mode 1 (90 deg)
+  glcdFillScreen(GLCD_WHITE);            // Set background color as white
+  setTextColor(GLCD_BLACK);              // Set text color as black
+  setTextBackgroundColor(GLCD_WHITE);    // Set text background as white
+                                           / / Loop 13 times for displaying messages
+  for (i=0;i&lt;13;i++)
+  {
+    glcd(i,i,&quot;Row %d &quot;,i);               // Display messages on the screen
+  }
+}
+void loop()
+{}</code></pre>
+<p><strong>Code description</strong></p>
+<p>This sketch add 3 functions of GLCD displaying as follows :</p>
+<p>1. <code>glcdFillScreen</code> - Set the screen background color function</p>
+<p>2. <code>setTextColor</code> - Set the text color function</p>
+<p>3. <code>setTextBackground</code> - Set the text background color function</p>
+<p>After screen setting already, the sketch will send the Row message following line number that get from increase the value of i variable and also shift the position by using i variable value.</p>
+<p>Thus, first line will be displayed Row0 message at column 0. Next on the line 2 will show Row1 message respectively until line 12. It will be show Row 12 message at the column 12.</p>
+<p class="caption">Listing A1-2 : ATX2_GLCDmultipleline.ino; the sketch file of Arduino for sending message to display on the GLCD screen of the ATX2 board in multiline.</p>
+<p>(A1.2.2) Apply the supply voltage to the ATX2 board and turn on power. Connect the USB cable between ATX2 board and computer.</p>
+<p>(A1.2.3) Compile and upload the sketch to ATX2 board by clicking on the</p>
+<p><img class="inline-icon" src="../assets/img/icons/i-16a06f0fa9.png" alt="" width="18" height="18"> button or choose at menu <strong>File &gt; Upload</strong></p>
+<p><em>At the ATX2 screen, it shows Row0 to Row15 message on each line respectively</em>. <em>Summary, wide orientation of GLCD screen could be display 13 lines maximum with</em> <em>standard text size.</em></p>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p101-1.webp" alt="Illustration from the original manual (page 101)" width="793" height="645" loading="lazy" style="max-width:min(100%,423px)"></div></figure>
+
+<p class="srcnote">Original manual, pages 100–101</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="activity-1-1-hello-world.html"><small>Previous</small><span>Activity 1-1 Hello World</span></a><a class="next" href="activity-1-3-fun-with-size-and-rotation-text.html"><small>Next</small><span>Activity 1-3 Fun with size and rotation text on GLCD</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

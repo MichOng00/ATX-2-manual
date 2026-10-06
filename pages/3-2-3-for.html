@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.2.3 For () · ATX2 Activity Book</title>
+<meta name="description" content="For () is used to instruct a statement in braces in order to repeat operation following number of cycles required. This statement is very useful for a">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-2-3-for">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-2-operational-control-statements.html">3.2 Operational control statements</a></nav>
+<article class="doc"><h1><span class='hnum'>3.2.3</span> For ()</h1>
+<p><code>For ()</code> is used to instruct a statement in braces in order to repeat operation following number of cycles required. This statement is very useful for any function that needs to repeat and know the exact number of repetition round. It is often applied with Array variables in collection of readable values from many analog input pins that have pin numbers in sequence.</p>
+<p>The syntax of <code>For ()</code> command is divided into three parts as follows :</p>
+<pre class="code"><code>for (initialization; condition; increment)
+{
+   //statement(s);
+}</code></pre>
+<p>Beginning with <code>initialization</code> used to assign a default value of loop control variables. In each work cycle, a <code>condition</code> is checked. If the condition is true, a statement in braces is responded and a variable value is increased or decreased according to the order in <code>increment</code>. Repeating the test until the condition is false.</p>
+<h4 class="label">Example 3-5</h4>
+<pre class="code"><code>for (int i=1; i &lt;= 8; i++)
+{
+   // The statement for function by using a value of variable i and
+   // repeating the function until the value of variable i is
+   // greather than 8 ;
+}</code></pre>
+<p><code>For</code> statement of C language is more flexible than whose other computer languages are. It can ignore some parts or all three parts of the for statement. However, semicolon is still necessary.</p>
+
+<p class="srcnote">Original manual, page 26</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-2-2-if-else.html"><small>Previous</small><span>3.2.2 If…else</span></a><a class="next" href="3-2-4-switch-case.html"><small>Next</small><span>3.2.4 Switch-case</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

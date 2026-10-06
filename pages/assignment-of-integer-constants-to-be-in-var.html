@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assignment of integer constants to be in various number bases of Arduino · ATX2 Activity Book</title>
+<meta name="description" content="An integer constant is a number you write in a program of Arduino directly, such as 123, and normally, these numbers are decimal numbers. If you would">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="assignment-of-integer-constants-to-be-in-var">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-10-constants.html">3.10 Constants</a> <span>/</span> <a href="3-10-2-input-output-determination-of-direction-of-d.html">3.10.2 INPUT, OUTPUT : Determination of…</a></nav>
+<article class="doc"><h1>Assignment of integer constants to be in various number bases of Arduino</h1>
+<p>An integer constant is a number you write in a program of Arduino directly, such as 123, and normally, these numbers are decimal numbers. If you would like to specify them into other number radix systems, you will have to use special marks to specify. For example</p>
+<h4 class="label">BaseExample</h4>
+<p>10 (decimal)123</p>
+<p>2 (binary)B1111011</p>
+<p>8 (octal)0173</p>
+<p>16 (hexadecimal)0x7B</p>
+<p><strong>Decimal</strong> is a decimal number used in daily life</p>
+<p>Example : 101 = 101. It is from (1* 102) + (0 * 101) + (1 * 100) = 100 + 0 + 1 = 101 <strong>Binary</strong> is a binary number in which a number in each position can be only 0 or 1. Example : B101 = 5 in decimal. It is from (1 * 22) + (0 * 21) + (1 * 20) = 4 + 0 + 1 = 5 Binary numbers can be used less than 8 bits (not greater than 1 byte) and have values from 0 to (B0) 255 (B11111111).</p>
+<p><strong>Octal</strong> is an octal number and a number in each position has a value from 0 to 7 only.</p>
+<p>Example : 0101 = 65 in decimal. It is from (1 * 82) + (0 * 81) + (1 * 80) = 64 + 0 +1 = 65</p>
+<p>Caution in configuration of constants is to not put 0 in the front, otherwise, a compiler will translate a meaning incorrectly that a number value is octal.</p>
+<p><strong>Hexadecimal (Hex)</strong> is a hexadecimal number. A number in each position is worth from 0 to 9 and character A is 10 and B is 11 until F which is equal to 15.</p>
+<p>Example : 0x101 = 257 in decimal. It is from (1 * 162) + (0 * 161) + (1 * 160) = 256 + 0 + 1 = 257</p>
+
+<p class="srcnote">Original manual, page 49</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-10-2-input-output-determination-of-direction-of-d.html"><small>Previous</small><span>3.10.2 INPUT, OUTPUT : Determination of direction of digital port pins</span></a><a class="next" href="3-11-other-operators-related-to-variables.html"><small>Next</small><span>3.11 Other operators related to variables</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

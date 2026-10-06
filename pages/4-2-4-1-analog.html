@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4.2.4.1 analog · ATX2 Activity Book</title>
+<meta name="description" content="This gets digital data from the analog to digital converter module of any analog port; A0 to A12 of the ATX2 controller board.">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="4-2-4-1-analog">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-4.html">Ch. 4 ATX2 library</a> <span>/</span> <a href="4-2-library-description.html">4.2 Library description</a> <span>/</span> <a href="4-2-4-analog-input-library.html">4.2.4 Analog input library</a></nav>
+<article class="doc key"><h1><span class='hnum'>4.2.4.1</span> analog</h1>
+<p>This gets digital data from the analog to digital converter module of any analog port; A0 to A12 of the ATX2 controller board.</p>
+<h4 class="label label-syntax">Syntax</h4>
+<pre class="code sig"><code>unsigned int analog(unsigned char channel)</code></pre>
+<h4 class="label">Parameter</h4>
+<p class="param"><code>channel</code> - Analog input port. It is 0 to 12 (means A0 to A12)</p>
+<h4 class="label">Return value</h4>
+<p>Digital data from analog to digital converter module. The value is 0 to 1,023 (in decimal). It represents 0 to +5Vdc.</p>
+<h4 class="label">Example 4-7</h4>
+<pre class="code"><code>#include &lt;ATX2.h&gt;          // Include main library
+int val=0;                 // Declare stored variable
+void setup()
+{
+   OK();                   // Wait for OK
+   glcdClear();
+   setTextSize(2);         // Set text size as 2x
+}
+void loop()
+{
+   glcd(1,2,&quot;AnalogTest&quot;); // Show message on GLCD
+   val  = analog(2);       // Read A2 input and store to val variable
+   setTextSize(3);         // Set text size as 3x
+   glcd(2,2,&quot;%d   &quot;,val);  // Show A2 value
+   setTextSize(2);         // Set text size back to 2x
+}</code></pre>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p059-1.webp" alt="Illustration from the original manual (page 59)" width="1062" height="807" loading="lazy" style="max-width:min(100%,566px)"></div></figure>
+<p><em>Illustration shows how to connect the ZX-POT (simple analog sensor) to the ATX2</em> <em>controller board for analog function testing.</em></p>
+<p><em>After uploading, ATX2 will read analog value from A2 input and shows the digital</em> <em>data that converted by A/D converter within microcontroller. The value is 0 to 1,023</em> <em>from 10-bit A/D converter resolution.</em></p>
+
+<p class="srcnote">Original manual, pages 58–59</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="4-2-4-analog-input-library.html"><small>Previous</small><span>4.2.4 Analog input library</span></a><a class="next" href="4-2-4-2-knob.html"><small>Next</small><span>4.2.4.2 knob( )</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

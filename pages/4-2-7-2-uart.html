@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4.2.7.2 uart · ATX2 Activity Book</title>
+<meta name="description" content="This is serial data sending function via UART0 port. The default baudrate of this function is 9,600 bit per second.">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="4-2-7-2-uart">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-4.html">Ch. 4 ATX2 library</a> <span>/</span> <a href="4-2-library-description.html">4.2 Library description</a> <span>/</span> <a href="4-2-7-serial-data-communication-library.html">4.2.7 Serial data communication library</a></nav>
+<article class="doc key"><h1><span class='hnum'>4.2.7.2</span> uart</h1>
+<p>This is serial data sending function via UART0 port. The default baudrate of this function is 9,600 bit per second.</p>
+<h4 class="label label-syntax">Syntax</h4>
+<pre class="code sig"><code>void uart(char *p,...)</code></pre>
+<h4 class="label">Parameter</h4>
+<p class="param">*p - Type of data. Support the special character for setting display method.</p>
+<h4 class="label">CommandOperation</h4>
+<p>%c or %CDisplay 1 character</p>
+<p>%d or %DDisplay the decimal value -32,768 to +32,767</p>
+<p>%l or %LDisplay the decimal value -2,147,483,648 to +2,147,483,647 %f or %FDisplay floating point 3 digits</p>
+<p>\rSet the message left justify of the line</p>
+<p>\nDisplay message on the new line</p>
+<h4 class="label">Example 4-16</h4>
+<pre class="code"><code>#include &lt;ATX2.h&gt; // Include main library
+void setup()
+{}
+void loop()
+{
+   uart(&quot;Hello Robo-Creator2!\r\n&quot;);
+   // Transmit data to computer with carriage returm
+   sleep(2000);      // Delay 2 seconds
+}</code></pre>
+<p>For running this sketch, still connect the USB cable after uploading. Open the</p>
+<p>Serial Monitor by clicking on <img class="inline-icon" src="../assets/img/icons/i-5579604c8f.png" alt="" width="19" height="19"> button or choose at menu <strong>Tools &gt; Serial Monitor</strong></p>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p068-1.webp" alt="Illustration from the original manual (page 68)" width="949" height="261" loading="lazy" style="max-width:min(100%,506px)"></div></figure>
+<p>Wait a moment, The Serial Monitor is appeared and shows the messages following the picture below. Click to mark at <strong>Auto Scroll</strong> box and select <strong>No line ending</strong>. Last box is selected to <strong>9600 Baud.</strong></p>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p069-1.webp" alt="Illustration from the original manual (page 69)" width="720" height="380" loading="lazy" style="max-width:min(100%,384px)"></div></figure>
+
+<p class="srcnote">Original manual, pages 68–69</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="4-2-7-1-hardware-connection.html"><small>Previous</small><span>4.2.7.1 Hardware connection</span></a><a class="next" href="4-2-7-3-uart-set-baud.html"><small>Next</small><span>4.2.7.3 uart_set_baud</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

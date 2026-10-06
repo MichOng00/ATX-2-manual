@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activity 1-5 : Draw the curve · ATX2 Activity Book</title>
+<meta name="description" content="Except the circles and rectangle, the curve is a key component in creating graphics. In glcd function also provides a function to create the curve. It">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="activity-1-5-draw-the-curve">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-6.html">Ch. 6 Hardware experiment of ATX2 board</a> <span>/</span> <a href="activity-1-shows-message-on-the-display-of-t.html">Activity 1 : Shows message on th…</a></nav>
+<article class="doc"><h1>Activity 1-5 : Draw the curve</h1>
+<p>Except the circles and rectangle, the curve is a key component in creating graphics. In glcd function also provides a function to create the curve. It is <code>glcdArc()</code>. The parameter that must be reasonable. See more detail in chapter of the GLCD library.</p>
+<p>(A1.5.1) Open the Arduino 1.0.7 software. Create the new sketch file. Type the code following the Listing A1-5. then save as the sketch.</p>
+<p>(A1.5.2) Apply the supply voltage to the ATX2 board and turn on power. Connect the USB cable between ATX2 board and computer.</p>
+<p>(A1.5.3) Compile and upload the sketch to ATX2 board by clicking on the</p>
+<p><img class="inline-icon" src="../assets/img/icons/i-be48670dc2.png" alt="" width="17" height="17"> button or choose at menu <strong>File &gt; Upload</strong></p>
+<figure class="listing"><pre class="code"><code>#include &lt;ATX2.h&gt;
+int i;
+// Smiley face graphic function
+void face()
+{
+   glcdFillCircle(64,70,50,GLCD_WHITE);
+   glcdArc(48,60,16,30,150,GLCD_RED);
+   glcdCircle(48,55,5,GLCD_BLUE);
+   glcdCircle(80,55,5,GLCD_BLUE);
+   glcdArc(80,60,16,30,150,GLCD_RED);
+   glcdFillCircle(64,70,7,GLCD_YELLOW);
+   glcdArc(64,80,30,220,320,GLCD_RED);
+   glcdArc(64,80,29,220,320,GLCD_RED);
+}
+void setup()
+{
+   //glcdSetColorWordRGB();        // Enable this function if displaying color
+                                   // incorrect
+}
+void loop()
+{
+   for(i=0;i&lt;4;i++)
+   {
+     glcdClear();
+     glcdMode(i);                  // Rotate displaying
+     face();
+     sleep(1000);
+   }
+}</code></pre><figcaption>Listing A1-5 : GLCDarcTest.pde; the sketch file for demonstration of creating the curve on GLCD screen of the IPST-SE board</figcaption></figure>
+<p>(A1.5.4) Run the sketch. See the ATX2 board operation.</p>
+<p><em>The display shows a smiley face for 1 second and turn it each 90 degrees respectively</em> <em>and then loop back to the start page. The display will go all the time.</em></p>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p107-1.webp" alt="Illustration from the original manual (page 107)" width="1174" height="376" loading="lazy" style="max-width:min(100%,626px)"></div></figure>
+
+<p class="srcnote">Original manual, pages 106–107</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="activity-1-4-simple-graphic-displaying.html"><small>Previous</small><span>Activity 1-4 : Simple graphic displaying</span></a><a class="next" href="activity-2-reading-knob-and-ok-button-of-the.html"><small>Next</small><span>Activity 2 : Reading KNOB and OK button of the ATX2 board</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

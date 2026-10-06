@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.7.2 { } (Curly-braces) · ATX2 Activity Book</title>
+<meta name="description" content="Curly braces are a major part of C programming language and used to determine operation in each period. An opening brace {must always be followed by a">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-7-2-curly-braces">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-7-syntax-of-arduino.html">3.7 Syntax of Arduino</a></nav>
+<article class="doc"><h1><span class='hnum'>3.7.2</span> { } (Curly-braces)</h1>
+<p>Curly braces are a major part of C programming language and used to determine operation in each period. An opening brace {must always be followed by a closing brace} or it is said that parentheses must be balanced. In Arduino IDE software that is used for programming will have an ability to check the balance of curly braces so users just click at a parenthesis and its logical companion will be highlighted.</p>
+<p>For beginning programmers and programmers coming to C language from BASIC language might be confused with the application of brackets. In fact, curly braces can be compared with the RETURN statement in subroutine (function) or replace the ENDIF statement in comparison, and the NEXT statements in a FOR loop.</p>
+<p>Because the use of the curly braces is so varied, it is good that you should type a closing bracket immediately after typing the opening bracket. Next, press ENTER button in between two braces to start a new line and write a desired statement. If you can follow this suggestion, your braces will never become unbalanced.</p>
+<p>Unbalanced braces can make mistakes while a programme is compiled. If a programme is large, it is hard to track down any mistake. Location of each bracket influences to the syntax of a program. Therefore, moving a brace one or two lines will affect the meaning of a program.</p>
+<h4 class="label">The main use of curly braces</h4>
+<h4 class="label">Functions</h4>
+<pre class="code"><code>void myfunction(datatype argument)
+{
+   statements(s)
+}</code></pre>
+<h4 class="label">Loops</h4>
+<pre class="code"><code>while (boolean expression)
+{
+   statement(s)
+}
+do
+{
+   statement(s)
+} while (boolean expression);
+for (initialisation; termination condition; incrementing expr)
+{
+   statement(s)
+}</code></pre>
+<h4 class="label">Conditional statements</h4>
+<pre class="code"><code>if (boolean expression)
+{
+   statement(s)
+}
+else if (boolean expression)
+{
+   statement(s)
+}
+else
+{
+   statement(s)
+}</code></pre>
+
+<p class="srcnote">Original manual, pages 38–39</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-7-1-semicolon.html"><small>Previous</small><span>3.7.1 ; (semicolon)</span></a><a class="next" href="3-7-3-single-line-comment-and-multi-line-comment.html"><small>Next</small><span>3.7.3 // (single line comment) and /*…* (multi-line comment)</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

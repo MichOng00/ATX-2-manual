@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activity 1-4 : Simple graphic displaying · ATX2 Activity Book</title>
+<meta name="description" content="The glcd() function is main function for GLCD screen of ATX2 board operation. Except showing text messages, this function also support more commands f">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="activity-1-4-simple-graphic-displaying">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-6.html">Ch. 6 Hardware experiment of ATX2 board</a> <span>/</span> <a href="activity-1-shows-message-on-the-display-of-t.html">Activity 1 : Shows message on th…</a></nav>
+<article class="doc"><h1>Activity 1-4 : Simple graphic displaying</h1>
+<p>The glcd() function is main function for GLCD screen of ATX2 board operation. Except showing text messages, this function also support more commands for drawing lines and simple geometry shape. Includes :</p>
+<pre class="code"><code>glcdRect(int x1,int y1,int width,int height,uint color)    is</code></pre>
+<p>function to draw a rectangle shape.</p>
+<pre class="code"><code>glcdFillRect(int x1,int y1,int width,int height,uint color)</code></pre>
+<p>is function to create a solid rectangle shape.</p>
+<pre class="code"><code>glcdLine(int x1, int y1, int x2, int y2,uint color)  is function</code></pre>
+<p>to draw the line.</p>
+<p><code>glcdCircle(int x, int y, int radius,uint color)</code> is function to draw a circle.</p>
+<pre class="code"><code>glcdFillCircle(int x, int y, int radius,uint color)  is function</code></pre>
+<p>to create a solid circle shape.</p>
+<p><code>glcdClear(uint color)</code> is clear display function.</p>
+<p>The testing program is shown in the Listing A1-4. Create the sketch, compile and upload to the ATX2 board. The result is as follows :</p>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p104-1.webp" alt="Illustration from the original manual (page 104)" width="1121" height="367" loading="lazy" style="max-width:min(100%,598px)"></div></figure>
+<p>If the color of the display is not correct, may be due to the version of the GLCD monitor. This GLCD monitor has 2 versions that different data setting. The solution is remove <strong>//</strong> symbol from the <strong><em>glcdSetColorWordRGB ();</em></strong> function in <strong>setup();</strong> . It will be change the color data setting.</p>
+<figure class="listing"><pre class="code"><code>#include &lt;ATX2.h&gt;                  // Include IPST-SE library
+int i,j;
+void setup()
+{
+   //glcdSetColorWordRGB();        // Enable this function if displaying color
+                                   // incorrect
+}
+void loop()
+{
+   glcdClear;                      // Clear screen and set background to black
+   sleep(300);
+   for (i=0;i&lt;160;i+=4)
+   {
+     glcdLine(0,0,128,i,GLCD_WHITE);     // Draw the white line from 0,0
+                                         // coordinate to target
+   }
+   for (i=0;i&lt;128;i+=4)
+   {
+     glcdLine(0,0,i,160,GLCD_RED);       // Draw the red line from 0,0
+                                         // coordinate to target
+   }
+   sleep(2000);
+   glcdRect(32,40,64,80,GLCD_BLUE);      // Draw the blue rectangle layout
+   sleep(300);
+   glcdFillCircle(32,40,31,GLCD_GREEN);  // Create the solid green circle
+   glcdFillCircle(96,40,31,GLCD_YELLOW); // Create the solid yellow circle
+   glcdFillCircle(32,120,31,GLCD_MAGENTA);  // Create the solid margenta circle
+   glcdFillCircle(96,120,31,GLCD_SKY);   // Create the solid light blue circle
+   sleep(1000);
+   glcdCircle(64,40,31,GLCD_GREEN);      // Draw the green circumference
+   glcdCircle(32,80,31,GLCD_BLUE);       // Draw the blue circumference
+   glcdCircle(64,120,31,GLCD_YELLOW);    // Draw the yellow circumference
+   glcdCircle(96,80,31,GLCD_SKY);        // Draw the light blue circumference
+   sleep(1000);
+   glcdFillRect(0,0,128,160,GLCD_YELLOW); // Create the  solid yellow rectangle
+   sleep(1000);
+}</code></pre><figcaption>Listing A1-4 : ATX2_SimpleGraphic.ino; the sketch file for demonstration of simple graphic displaying of the ATX2 board</figcaption></figure>
+
+<p class="srcnote">Original manual, pages 104–105</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="activity-1-3-fun-with-size-and-rotation-text.html"><small>Previous</small><span>Activity 1-3 Fun with size and rotation text on GLCD</span></a><a class="next" href="activity-1-5-draw-the-curve.html"><small>Next</small><span>Activity 1-5 : Draw the curve</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

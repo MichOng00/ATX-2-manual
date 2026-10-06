@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.2.1 If · ATX2 Activity Book</title>
+<meta name="description" content="Used to test for evaluating conditions during program operation, for example, if an input value is greater than a certain value, what should be done i">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-2-1-if">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-2-operational-control-statements.html">3.2 Operational control statements</a></nav>
+<article class="doc"><h1><span class='hnum'>3.2.1</span> If</h1>
+<p>Used to test for evaluating conditions during program operation, for example, if an input value is greater than a certain value, what should be done in that case. The syntax is shown as follows.</p>
+<pre class="code"><code>if (someVariable &gt; 50)
+{
+   // do something here
+}</code></pre>
+<p><em>The program will check whether the value of someVariable is greater than</em> <em>50 or not. If so, what will have to do but if it is not, just skip to the function of this section.</em></p>
+<p>The function of this command is to test certain conditions, which are written in brackets. If the condition is true, follow an instruction in braces but if the condition is false, leave out the function of this section.</p>
+<p>The conditional test which is in brackets will have to use these comparison operators as follows.</p>
+<p>x == y (x equal to y)</p>
+<p>x != y (x not equal to y)</p>
+<p>x &lt; y (x less than y)</p>
+<p>x &gt; y (x greater than y)</p>
+<p>x &lt;= y (x less than or equal to y)</p>
+<p>x &gt;= y (x greater than or equal to y)</p>
+<h4 class="label">Techniques for programming</h4>
+<p>In the comparison of variables, you should use the operator ==, e.g. if (x==10). Do not use =, such as if (x=10), because a statement like this assigns a value of ten(10) to the variable x.</p>
+<p>Moreover, If statements can be applied to control intersection of the program and the If...else statements can be used as well.</p>
+
+<p class="srcnote">Original manual, page 24</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-2-operational-control-statements.html"><small>Previous</small><span>3.2 Operational control statements</span></a><a class="next" href="3-2-2-if-else.html"><small>Next</small><span>3.2.2 If…else</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

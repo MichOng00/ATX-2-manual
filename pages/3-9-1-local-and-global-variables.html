@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.9.1 Local and global variables · ATX2 Activity Book</title>
+<meta name="description" content="Global variables are variables all functions in a program known by declaring the variables outside functions. Local variables are variables proclaimed">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-9-1-local-and-global-variables">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-9-scope-of-variables.html">3.9 Scope of variables</a></nav>
+<article class="doc"><h1><span class='hnum'>3.9.1</span> Local and global variables</h1>
+<p>Global variables are variables all functions in a program known by declaring the variables outside functions. Local variables are variables proclaimed inside braces of functions and known only in functions.</p>
+<p>When programs are larger and more complex, usage of local variables is very useful because only functions can apply the variables. This helps to protect mistakes when a function modifies variable values used by other functions.</p>
+<h4 class="label">Example 3-40</h4>
+<pre class="code"><code>int gPWMval;       // All functions can see this variable.
+void setup()
+{}
+void loop()
+{
+   int i;         // Variable i will be seen and performed inside only
+                  // a loop function.
+   float f;       // Variable f will be seen and applied only inside a
+                  // loop function.
+}</code></pre>
+
+<p class="srcnote">Original manual, page 47</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-9-scope-of-variables.html"><small>Previous</small><span>3.9 Scope of variables</span></a><a class="next" href="3-9-2-static-variables.html"><small>Next</small><span>3.9.2 Static variables</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

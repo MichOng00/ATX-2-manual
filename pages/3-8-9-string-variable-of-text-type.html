@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.8.9 string : variable of text type · ATX2 Activity Book</title>
+<meta name="description" content="String is a variable that stores text and it is usually array of a char variable in C language.">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-8-9-string-variable-of-text-type">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-8-variables.html">3.8 Variables</a></nav>
+<article class="doc"><h1><span class='hnum'>3.8.9</span> string : variable of text type</h1>
+<p>String is a variable that stores text and it is usually array of a char variable in C language.</p>
+<p><strong>Example 3-37 : Example of declaration of string variables</strong></p>
+<pre class="code"><code>char Str1[15];
+char Str2[8] = {&#x27;a&#x27;,&#x27;r&#x27;,&#x27;d&#x27;,&#x27;u&#x27;,&#x27;i&#x27;,&#x27;n&#x27;,&#x27;o&#x27;};
+char Str3[8] = {&#x27;a&#x27;,&#x27;r&#x27;,&#x27;d&#x27;,&#x27;u&#x27;,&#x27;i&#x27;,&#x27;n&#x27;,&#x27;o&#x27;,&#x27;\0&#x27;};
+char Str4[ ] = &quot;arduino&quot;;
+char Str5[8] = &quot;arduino&quot;;
+char Str6[15] = &quot;arduino&quot;;</code></pre>
+<ul><li><em>Str1 is a declaration of a string variable in which a default value is not defined.</em></li><li><em>Str2 announces a string variable along with defining a value of each character</em> <em>for a text. If it is not completed following the announced number, a compiler will add null</em> <em>string until completing (from the example, 8 characters are declared but the text has only</em> <em>7 characters so a compiler fill one null string).</em></li><li><em>Str3 states a string variable together with determining a value to give a text</em> <em>and close the end with a closing character which is\0.</em></li><li><em>Str4 declares a string variable together with a determining a variable value in</em> <em>quotes. From the example, it doesn’t assign the size of a variable, so a compiler will assign</em> <em>the size according to a number of letters.</em></li><li><em>Str5 proclaims a string variable along with specifying a variable value in a</em> <em>quotation mark and the size of the variable, from the example, is 8 letters.</em></li><li><em>Str6 reveals a string variable and defines the size reserving for another text</em> <em>that is longer than this.</em></li></ul>
+<section class="children"><h2>In this section</h2><ul><li><a href="3-8-9-1-addition-of-characters-which-inform-null-ter.html"><span class="num">3.8.9.1</span> Addition of characters which inform null termination</a></li><li><a href="3-8-9-2-single-and-double-quotes.html"><span class="num">3.8.9.2</span> Single and double quotes</a></li></ul></section>
+<p class="srcnote">Original manual, page 45</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-8-8-double-double-precision-floating-point-varia.html"><small>Previous</small><span>3.8.8 double : Double precision floating-point variable</span></a><a class="next" href="3-8-9-1-addition-of-characters-which-inform-null-ter.html"><small>Next</small><span>3.8.9.1 Addition of characters which inform null termination</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

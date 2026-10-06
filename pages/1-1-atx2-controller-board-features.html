@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.1 ATX2 controller board features · ATX2 Activity Book</title>
+<meta name="description" content="In the figure 1-1, it is shown components of the ATX2 controller board and there are significant technical features as follows:">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="1-1-atx2-controller-board-features">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-1.html">Ch. 1 ATX2 controller board overview</a></nav>
+<article class="doc"><h1><span class='hnum'>1.1</span> ATX2 controller board features</h1>
+<p>In the figure 1-1, it is shown components of the ATX2 controller board and there are significant technical features as follows:</p>
+<ul><li>Main microcontroller is Atmel’s ATmeg644. It features 8-ch 10-bit Analog to Digital Converter, 128-KByte Flash memory , 4-KByte EEPROM, 4-KByte RAM. Operated with 16MHz clock from external crystal</li><li>Define all ports compatible with Arduino I/O standard hardware. The number of port are 0 to 31. All ports available with 3-pin of 2.00mm. header. (+5V, Signal and GND)</li><li>13 programmable port in JST connector type. Includes Digital I/O port (2, 3, 8, 9, 18, 24 to 31), A/D port (8 : port 24/A0 to 31/A7), Two-wire interface or TWI (8/SCL and 9/ SDA) and UART serial port communication (2/RxD1 and 3/TxD1). Both TWI and UART ports can config to digital input/output port for more I/O applications.</li><li>Extension analog input (A8 to A12) and One variable resistor is labeled KNOB and OK button for ADC experiments. Only these inputs are analog input only.</li><li>All analog supports 0 to +5Vdc input. The converter resolution is 10-bit. The result value is 0 to 1,023 range.</li><li>One of button switch “OK” for simple digital input experiment.</li></ul>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p006-1.webp" alt="Figure 1-1 : ATX2 controller board layout" width="1175" height="867" loading="lazy" style="max-width:min(100%,627px)"></div><figcaption>Figure 1-1 : ATX2 controller board layout</figcaption></figure>
+<ul><li>One piezo speaker</li><li>UART port (RxD1 and TxD1) for interfacing serial module device such as Pixy camera module, servo controller board (Parallax servo controller, ZX-SERVO16i), Real-time clock (ZX-17 : serial real-time clock module)</li><li>128x160 dots color GLCD. It only supports line-art , color background and text with 21 characters 16 lines (no support the image file).</li><li>6-ch of DC motor driver with LED indicator. Support 4.5 to 9V motor 1.2A (max)</li><li>8-ch of Servo motor outputs</li><li>Upload with computer via USB port</li><li>2 of power inputs ; DC adaptor jack and 2-pin terminal block for battery</li><li>Power switch and RESET switch available</li><li>Requires +6 to 9V 500mA supply voltage in normal operation (no motor driving) and/or at least 1500mA for robotics application.</li><li>+5V switching regualator on-board with polarity protection circuit</li></ul>
+
+<p class="srcnote">Original manual, pages 6–7</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="chapter-1.html"><small>Previous</small><span>Chapter 1: ATX2 controller board overview</span></a><a class="next" href="1-2-atx2-cable-information.html"><small>Next</small><span>1.2 ATX2 cable information</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

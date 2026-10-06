@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>4.2.6 Servo motor library · ATX2 Activity Book</title>
+<meta name="description" content="This is library for control the servo motor of ATX2 board. It has 8 servo motor outputs. It can drive each output or all in same time.">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="4-2-6-servo-motor-library">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-4.html">Ch. 4 ATX2 library</a> <span>/</span> <a href="4-2-library-description.html">4.2 Library description</a></nav>
+<article class="doc key"><h1><span class='hnum'>4.2.6</span> Servo motor library</h1>
+<p>This is library for control the servo motor of ATX2 board. It has 8 servo motor outputs. It can drive each output or all in same time.</p>
+<p>There is only one function in this library. It is <strong>servo.</strong></p>
+<h4 class="label label-syntax">Syntax</h4>
+<pre class="code sig"><code>void servo(unsigned char _ch, int _angle)</code></pre>
+<h4 class="label">Parameter</h4>
+<p class="param"><code>_ch</code> - Servo motor output. It is 1 to 8</p>
+<p class="param"><code>_pos</code> - Servo motor shaft position. It is 0 to 180 and -1.</p>
+<p class="param">If set to -1, <strong>it means stop that servo motor output</strong></p>
+<h4 class="label">Example 4-15</h4>
+<pre class="code"><code>#include &lt;ATX2.h&gt;     // Include main library
+void setup()
+{
+   OK();           // Check the OK switch pressing
+}
+void loop()
+{
+   servo(0,60);    // Drive servo motor0 to 60 degress position
+   sleep(5000);    // Delay 5 seconds
+   servo(0,120);   // Drive servo motor0 to 120 degree position
+   sleep(5000);    // Delay 5 seconds
+}</code></pre>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p066-1.webp" alt="Illustration from the original manual (page 66)" width="1163" height="503" loading="lazy" style="max-width:min(100%,620px)"></div></figure>
+
+<p class="srcnote">Original manual, page 66</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="4-2-5-2-motor-stop.html"><small>Previous</small><span>4.2.5.2 motor_stop</span></a><a class="next" href="4-2-7-serial-data-communication-library.html"><small>Next</small><span>4.2.7 Serial data communication library</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

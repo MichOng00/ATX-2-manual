@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>5.3.3 color[ ] · ATX2 Activity Book</title>
+<meta name="description" content="It is array type variable. It is used for set the 18 colors. Developers can also use color[] directly or use the color name.">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="5-3-3-color">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-5.html">Ch. 5 ATX2 with GLCD activity</a> <span>/</span> <a href="5-3-atx2-board-s-color-glcd-function-description.html">5.3 ATX2 board’s color GLCD function…</a></nav>
+<article class="doc key"><h1><span class='hnum'>5.3.3</span> color[ ]</h1>
+<p>It is array type variable. It is used for set the 18 colors. Developers can also use <code>color[]</code> directly or use the color name.</p>
+<h4 class="label label-syntax">Syntax</h4>
+<pre class="code sig"><code>unsigned int color[]=  { GLCD_RED,
+  GLCD_GREEN,  GLCD_BLUE,
+  GLCD_YELLOW, GLCD_BLACK,
+  GLCD_WHITE, GLCD_SKY,
+  GLCD_MAGENTA, GLCD_ORANGE,
+  GLCD_LIME, GLCD_VIOLET
+  GLCD_PINK, GLCD_DOLLAR,
+  GLCD_BROWN, GLCD_DARKGREEN,
+  GLCD_NAVY,GLCD_DARKGREY,
+  GLCD_GREY};</code></pre>
+<h4 class="label">Parameter</h4>
+<p class="param"><code>GLCD_RED</code> - Select red<code>GLCD_GREEN</code> - Select green <code>GLCD_BLUE</code> - Select blue<code>GLCD_YELLOW</code> - Select yellow <code>GLCD_BLACK</code> - Select black<code>GLCD_WHITE</code> - Select white <code>GLCD_SKY</code>- Select sky blue color<code>GLCD_MAGENTA</code> - Select magenta <code>GLCD_ORANGE</code> - Select orange<code>GLCD_LIME</code> - Select lime green <code>GLCD_VIOLET</code> - Select vilolet<code>GLCD_PINK</code> - Select pinko <code>GLCD_DOLLAR</code> - Select black<code>GLCD_BROWN</code> - Select white <code>GLCD_DARKGREEN</code> - Select dark green<code>GLCD_NAVY</code> - Select magenta <code>GLCD_DARKGREY</code> - Select dark grey color<code>GLCD_GREY</code> - Select Grey</p>
+<h4 class="label">Example 5-4</h4>
+<pre class="code"><code>glcdFillScreen(color[5]);     // Set background color as white</code></pre>
+<h4 class="label">Example 5-5</h4>
+<pre class="code"><code>glcdFillScreen(GLCD_BLUE);    // Set backgrounbd color as blue</code></pre>
+
+<p class="srcnote">Original manual, page 79</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="5-3-2-colorrgb.html"><small>Previous</small><span>5.3.2 colorRGB</span></a><a class="next" href="5-3-4-glcdsetcolorwordbgr.html"><small>Next</small><span>5.3.4 glcdSetColorWordBGR</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

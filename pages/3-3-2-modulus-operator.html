@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.3.2 Modulus operator : % · ATX2 Activity Book</title>
+<meta name="description" content="The operator is able to compute remainder of 2 integers but not to apply for floating-point variables (float).">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-3-2-modulus-operator">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-3-arithmetic-operators.html">3.3 Arithmetic Operators</a></nav>
+<article class="doc"><h1><span class='hnum'>3.3.2</span> Modulus operator : %</h1>
+<p>The operator is able to compute remainder of 2 integers but not to apply for floating-point variables (float).</p>
+<h4 class="label label-syntax">Syntax</h4>
+<pre class="code sig"><code>result = value1 % value2;</code></pre>
+<h4 class="label">Parameters</h4>
+<p class="param"><code>value1</code> - a variable of byte, char, int or long type</p>
+<p class="param"><code>value2</code> - a variable of byte, char, int or long type</p>
+<h4 class="label">Result</h4>
+<p>Remainder from performing integer division is integer data.</p>
+<h4 class="label">Example 3-8</h4>
+<pre class="code"><code>x = 7 % 5;   // x now contains 2
+x = 9 % 5;   // x now contains 4
+x = 5 % 5;   // x now contains 0
+x = 4 % 5;   // x now contains 4</code></pre>
+<p><em>This modulus operator is applied for operation which demands events</em> <em>occurring at regular intervals or causes the memory, which stores array variables, to</em> <em>roll over.</em></p>
+<h4 class="label">Example 3-9</h4>
+<pre class="code"><code>// Examine the value of a detector for 10 times per a operating cycle
+void loop()
+{
+   i++;
+   if ((i % 10) == 0)
+   // Divide a value of i by 10 and then check
+   // if the remainder of division is 0 or not
+   {
+      x = analogRead(sensPin);  // Read from the detector for 10 times
+   }
+}</code></pre>
+<p><em>In this example, the</em> <code>%</code> <em>statement is used to assign the cycle of operation in</em> <em>which the program repeats performing to read value till the result of modulo division</em> <em>of the</em> <code>i % 10</code> <em>statement is equal to 0 and this occurs when i = 10 only.</em></p>
+
+<p class="srcnote">Original manual, page 30</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-3-1-arithmetic-operators-addition-subtraction-mu.html"><small>Previous</small><span>3.3.1 Arithmetic Operators, addition, subtraction, multiplication, and division</span></a><a class="next" href="3-4-comparison-operators.html"><small>Next</small><span>3.4 Comparison operators</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

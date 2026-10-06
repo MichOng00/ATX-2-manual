@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activity 4 : Simple I/O Controller · ATX2 Activity Book</title>
+<meta name="description" content="The library file ipst.h provides in (x) function for getting the digital logic &quot;0&quot; or &quot;1&quot; from input port of microcontroller. It helps the ATX2 to get">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="activity-4-simple-i-o-controller">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-6.html">Ch. 6 Hardware experiment of ATX2 board</a></nav>
+<article class="doc"><h1>Activity 4 : Simple I/O Controller</h1>
+<p>The library file ipst.h provides in (x) function for getting the digital logic "0" or "1" from input port of microcontroller. It helps the ATX2 to get the logic from external input device such as a push-button switch.</p>
+<p>In this activity, connect the ZX-LED board to the ATX2 board at any pin. Connect the ZX- SWITCH01 board that represent the digital input device to any pin of ATX2 board. Pressing and Releasing are used to control the LED on the ZX-LED board.</p>
+<p>(A4.1) Connect the ZX-SWITCH01 board to pin 28 of ATX2 board and connect ZX-LED board to pin 30.</p>
+<figure class="fig"><div class="imgs"><img src="../assets/img/p112-1.webp" alt="Illustration from the original manual (page 112)" width="1175" height="724" loading="lazy" style="max-width:min(100%,627px)"></div></figure>
+<p>(A4.2) Create the new sketch with Listing A4-1 and save as <strong>ATX2_SimpleIO.ino</strong> file.</p>
+<p>(A4.3) Compile and upload to the ATX2 board then run the sketch.</p>
+<p>(A4.4) Observe the operation of switch and LED.</p>
+<p><em>The ATX2 monitor shows the title message. Then press the</em> <strong><em>OK</em></strong> <em>button start. The screen</em> <em>shows message</em> &gt; Running..</p>
+<p><em>Try to press the ZX-SWITCH01. The LED on ZX-LED boards will operate same pressing</em> <em>the switch. For example, no pressing LED is on because the logic is high. If pressed, LED is off</em> <em>because the logic is low.</em></p>
+<figure class="listing"><pre class="code"><code>#include &lt;ATX2.h&gt;
+void setup()
+{
+  OK();          // Wait for OK to Start
+}
+void loop()
+{
+  if(in(28)==1)   // Check status at pin 28
+  {
+    out(30,1);    // If pin 28 is high, LED at pin 30 is on
+  }
+  else            // If pin 28 is low, LED at pin 30 is off
+  {
+    out(30,0);
+  }
+}</code></pre><figcaption>Listing A4-1 : ATX2_SimpleIO.ino; the sketch for demonstration about simple input/output controller by using the ATX2 board</figcaption></figure>
+
+<p class="srcnote">Original manual, pages 112–113</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="activity-3-control-the-simple-output-devices.html"><small>Previous</small><span>Activity 3 : Control the simple output devices</span></a><a class="next" href="activity-5-sound-activity.html"><small>Next</small><span>Activity 5 : Sound activity</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

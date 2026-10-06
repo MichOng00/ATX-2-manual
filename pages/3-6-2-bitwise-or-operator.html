@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.6.2 Bitwise OR operator ( | ) · ATX2 Activity Book</title>
+<meta name="description" content="A bitwise OR statement of C language is able to be written by using one mark of | by writing between expressions or integer variables. The process is ">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-6-2-bitwise-or-operator">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-6-bitwise-operators.html">3.6 Bitwise operators</a></nav>
+<article class="doc"><h1><span class='hnum'>3.6.2</span> Bitwise OR operator ( | )</h1>
+<p>A bitwise <code>OR</code> statement of C language is able to be written by using one mark of <code>|</code> by writing between expressions or integer variables. The process is to bring data of each bit of both variables to operate with OR logic. The rules are as follows.</p>
+<p>If any input or both are ‘1’, so the output is ‘1’. In case that both input are ‘0’ so the output is ‘0’ as following example.</p>
+<pre class="code"><code>0  0  1  1     Operand1
+0  1  0  1     Operand2
+——————————
+0  1  1  1     Returned result</code></pre>
+<h4 class="label">Example 3-15</h4>
+<p>The program shows application of bitwise OR operators.</p>
+<pre class="code"><code>int a =  92;   // equal to 0000000001011100 binary
+int b = 101;   // equal to 0000000001100101 binary
+int c = a | b; // The result is 0000000001111101 binary or 125 decimal</code></pre>
+<h4 class="label">Example 3-16</h4>
+<p>The program demonstrates application of bitwise AND and OR operators.</p>
+<p>The example of a program, which uses bitwise AND and OR operators, are called by programmers as Read-Modify-Write on a port. For 8-bit microcontroller, values of reading or writing to the port have the size of 8 bits and show input at all 8 pins. Writing values sending to a port is done only one time to cover all 8 bits.</p>
+<p>The variable named PORTD is the value used instead of the status of digital pin numbers 0, 1, 2, 3, 4, 5, 6, 7. If any bit has a value as 1, this makes that pin have logic value as HIGH (don’t forget to specify that port pin to work as output with pinMode command ( )) Therefore, if configuration of PORTD is determined = B00110001; this is to design pin 2, 3, and 7 as HIGH. In this case, it doesn’t need to change the status values of pin 0 and 1. Normally, hardware of Arduino is used in the serial communication. If you convert a value, this will affect to the serial communication.</p>
+<p>Algorithm for the program is as follows</p>
+<ul><li>Read a value from PORTD and then clean up the value at only the controlled bit (using a bitwise AND operator).</li><li>Take the modified PORTD value from above to add with the bit from above (OR operators).</li></ul>
+<p>Write the program as follows :</p>
+<pre class="code"><code>int i;                        // counter variable
+int j;
+void setup()
+{
+   DDRD = DDRD | B11111100;   // determine the direction of the
+                              // port pin 2 to 7 with the value of
+                              // 11111100
+   Serial.begin(9600);
+}
+void loop()
+{
+   for (i=0; i&lt;64; i++)
+   {
+      PORTD = PORTD &amp; B00000011; // determine data to pin 2 to 7
+      j = (i &lt;&lt; 2);
+      PORTD = PORTD | j;
+      Serial.println(PORTD, BIN);
+         // show the value of PORTD at the serial monitor window
+      delay(100);
+   }
+}</code></pre>
+
+<p class="srcnote">Original manual, pages 33–34</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-6-1-bitwise-and-operators.html"><small>Previous</small><span>3.6.1 Bitwise AND operators (&amp;)</span></a><a class="next" href="3-6-3-bitwise-exclusive-or-statement.html"><small>Next</small><span>3.6.3 Bitwise Exclusive OR statement (^)</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

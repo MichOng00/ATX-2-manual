@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.8.7 float : float-point variable · ATX2 Activity Book</title>
+<meta name="description" content="Float is a variable for storing a value of decimal number values. It is popular to be used to keep an analog signal value or a continuous value. Becau">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-8-7-float-float-point-variable">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-8-variables.html">3.8 Variables</a></nav>
+<article class="doc"><h1><span class='hnum'>3.8.7</span> float : float-point variable</h1>
+<p>Float is a variable for storing a value of decimal number values. It is popular to be used to keep an analog signal value or a continuous value. Because this variable gives values more precise than an int variable does, a float variable can store in a range of 4.4028235 x 1038 through -4.4028235 x 1038 and one variable will cover 32-bit memory space (4 bytes).</p>
+<p>In a mathematical calculation with the float variable will be slower than a calculation of int variable so you should avoid calculating with float variables when doing loop statement with the highest speed of a time function because it must be very precise. Some programmers will convert decimal numbers to integer numbers before a calculation for faster operation.</p>
+<h4 class="label label-syntax">Syntax</h4>
+<pre class="code sig"><code>float var = val;</code></pre>
+<h4 class="label">Parameters</h4>
+<p class="param"><code>var</code> - the float variable name</p>
+<p class="param"><code>val</code> - the value that determine to the variable</p>
+<h4 class="label">Example 3-35</h4>
+<pre class="code"><code>float myfloat;
+float sensorCalbrate = 1.117;</code></pre>
+<h4 class="label">Example 3-36</h4>
+<pre class="code"><code>int x;
+int y;
+float z;
+x = 1;
+y = x / 2;              // y is equal to 0 no storage of values of
+                        // remainder from division
+z = (float)x / 2.0;     // z is equal to 0.5</code></pre>
+<p><em>When there is a usage of a float variable, numbers that are operated with this</em> <em>float variable will be decimals as well. From the example is that number 2 calculated with</em> <em>float variable x, so the number 2 is written as 2.0.</em></p>
+
+<p class="srcnote">Original manual, pages 43–44</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-8-6-unsigned-long-a-variable-of-unsigned-32-bit.html"><small>Previous</small><span>3.8.6 unsigned long : a variable of unsigned 32-bit integer type</span></a><a class="next" href="3-8-8-double-double-precision-floating-point-varia.html"><small>Next</small><span>3.8.8 double : Double precision floating-point variable</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

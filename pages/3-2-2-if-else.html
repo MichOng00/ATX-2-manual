@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.2.2 If…else · ATX2 Activity Book</title>
+<meta name="description" content="Applied to test for determining conditions of the program operation and they are better than normal if statements. The process is that if a condition ">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-2-2-if-else">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-2-operational-control-statements.html">3.2 Operational control statements</a></nav>
+<article class="doc"><h1><span class='hnum'>3.2.2</span> If…else</h1>
+<p>Applied to test for determining conditions of the program operation and they are better than normal <code>if</code> statements. The process is that if a condition is true, what to do but if it is false, what to do so. For example, If a readable value of analog input is greater than 500, what to do but if the value is greater than or equal to 500, do another one else. Writing statements as follows:</p>
+<h4 class="label">Example 3-3</h4>
+<pre class="code"><code>if (pinFiveInput &lt; 500)
+{
+   // A statement for a kind of operation if a value of pinFiveInput
+   //is less than 500
+}
+else
+{
+   // A statement for another type of operation if a value of pinFiveInput
+   // is greater than or equal to 500
+}</code></pre>
+<p>After the <code>if…else</code> statement, able to be followed by the if command. Therefore, syntax becomes <code>if…else...if</code>. This is the test of conditions. When it is true, meet the demand as the following example.</p>
+<h4 class="label">Example 3-4</h4>
+<pre class="code"><code>if (pinFiveInput &lt; 500)
+{
+   // The statement for run a function, since pinFivelnput is less than 500
+}
+else if (pinFiveInput &gt;= 1000)
+{
+   // The statement for run another function
+   // because pinFivelnput is greater than or equal to 1000
+}
+else
+{
+   // The statement to set the next step in case that
+   // pinFiveInput is not less than 500 and greater than or equal to
+   // 1000 (that is there will be response of the statement in this
+   // subprogram when a variable has a value between 501 to 999
+}</code></pre>
+<p>After the <code>else</code> statement, able to be followed by unlimited if statements (or capable of putting the <code>switch case</code> statement instead of <code>if...else...if</code> statement for testing a lot of conditions)</p>
+<p>When the <code>if...else...</code>statement has been made, it is important to determine that if the examination does not match with any condition, what to do by specifying at the last <code>else</code> statement.</p>
+
+<p class="srcnote">Original manual, page 25</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-2-1-if.html"><small>Previous</small><span>3.2.1 If</span></a><a class="next" href="3-2-3-for.html"><small>Next</small><span>3.2.3 For ()</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>

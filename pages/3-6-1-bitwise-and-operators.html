@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3.6.1 Bitwise AND operators (&amp;) · ATX2 Activity Book</title>
+<meta name="description" content="AND in bitwise statements of C programming language can be represented by using the mark of &amp; in and you must write between expressions or integer var">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-root="../" data-page="3-6-1-bitwise-and-operators">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="../index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="../contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="chapter-3.html">Ch. 3 Arduino programming</a> <span>/</span> <a href="3-6-bitwise-operators.html">3.6 Bitwise operators</a></nav>
+<article class="doc"><h1><span class='hnum'>3.6.1</span> Bitwise AND operators (&amp;)</h1>
+<p><code>AND</code> in bitwise statements of C programming language can be represented by using the mark of <code>&amp;</code> in and you must write between expressions or integer variables. The work will take data of each bit of both variables to operate with AND logic. The rules are as follows.</p>
+<pre class="code"><code>0  0  1  1     Operand1
+0  1  0  1     Operand2
+——————————
+0  0  0  1     Returned result</code></pre>
+<p>If both inputs are ‘1’, both outputs are ‘1’. Other cases, outputs are ‘0’ as the following example. In checking, a pair of operators should be in the vertical.</p>
+<p>In Arduino, int variables have the size of 16 bits so when using <code>AND</code> bitwise operators, there is logical action in conjunction with all 16- bit data as the example in the following program.</p>
+<h4 class="label">Example 3-14</h4>
+<pre class="code"><code>int a =  92;   // equal to 0000000001011100 binary
+int b = 101;   // equal to 0000000001100101 binary
+int c = a &amp; b; // result is 0000000001000100 binary or 68 demical</code></pre>
+<p><em>In this example, all 16-bit data of variable a and b are performed by</em> <code>AND</code> <em>logic and then the result of all 16 bits will be stored at variable c, which the value is</em> <em>01000100 in binary number or 68 in decimal number.</em></p>
+<p>It is popular to use bitwise <code>AND</code> operators to select desired bit-data (maybe one bit or many bits) from int variables in which this selection of some bits is called masking.</p>
+
+<p class="srcnote">Original manual, pages 32–33</p>
+</article>
+<nav class="pager" aria-label="Previous and next"><a class="prev" href="3-6-bitwise-operators.html"><small>Previous</small><span>3.6 Bitwise operators</span></a><a class="next" href="3-6-2-bitwise-or-operator.html"><small>Next</small><span>3.6.2 Bitwise OR operator ( | )</span></a></nav>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="../assets/nav.js"></script>
+<script src="../assets/search-index.js"></script>
+<script src="../assets/site.js"></script>
+</body>
+</html>
