@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATX2 controller board activity book</title>
+<meta name="description" content="Web edition of the ATX2 controller board activity book (Robo-Creator2) with the ATX2 library and GLCD reference.">
+<script>try{var t=localStorage.getItem('theme');if(!t)t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-root="" data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <button id="menu" class="iconbtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="index.html">ATX2 <span>Activity Book</span></a>
+  <button id="searchbtn" class="searchbtn" aria-label="Search">Search <kbd>/</kbd></button>
+  <button id="theme" class="iconbtn" aria-label="Toggle dark mode"></button>
+</header>
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Site navigation"><noscript><p><a href="contents.html">Contents</a></p></noscript></aside>
+  <div id="scrim" class="scrim" hidden></div>
+  <main id="main"><section class="hero">
+<div><h1>ATX2 controller board activity book</h1>
+<p class="lede">The Robo-Creator2 guide to the ATX2 board: setting up Arduino IDE, the ATX2 library, the colour display, and hands-on experiments. Web edition of the original manual.</p>
+<div class="cta"><a class="btn" href="functions.html">Function index</a><a class="btn alt" href="pages/chapter-1.html">Start at Chapter 1</a><a class="btn alt" href="contents.html">Full contents</a></div></div>
+<img src="assets/img/p006-1.webp" alt="ATX2 controller board layout with its components labelled" width="900" height="900">
+</section>
+<section class="keycards">
+<article class="kcard"><div class="big">4</div><h2><a href="pages/chapter-4.html">ATX2 library</a></h2><p>Delay, sound, digital and analog I/O, DC motors, servos and serial communication.</p><div class="chips"><a href="pages/4-2-1-1-sleep-and-delay.html">sleep and delay</a><a href="pages/4-2-1-2-delay-us.html">delay_us</a><a href="pages/4-2-2-1-beep.html">beep</a><a href="pages/4-2-2-2-sound.html">sound</a><a href="pages/4-2-3-1-in.html">in</a><a href="pages/4-2-3-2-out.html">out</a><a href="pages/4-2-4-1-analog.html">analog</a><a href="pages/4-2-4-2-knob.html">knob</a><a href="pages/4-2-4-3-sw-ok.html">sw_OK()</a><a href="pages/4-2-5-1-motor.html">motor</a><a href="pages/4-2-5-2-motor-stop.html">motor_stop</a><a href="pages/4-2-6-servo-motor-library.html">Servo motor library</a><a href="pages/4-2-7-2-uart.html">uart</a><a href="pages/4-2-7-3-uart-set-baud.html">uart_set_baud</a><a href="pages/4-2-7-4-uart-available.html">uart_available</a><a href="pages/4-2-7-5-uart-getkey.html">uart_getkey</a><a href="pages/4-2-7-6-uart1.html">uart1</a><a href="pages/4-2-7-7-uart1-set-baud.html">uart1_set_baud</a><a href="pages/4-2-7-8-uart1-available.html">uart1_available</a><a href="pages/4-2-7-9-uart1-getkey.html">uart1_getkey</a></div></article>
+<article class="kcard"><div class="big">5</div><h2><a href="pages/chapter-5.html">ATX2 with GLCD activity</a></h2><p>Show text, numbers, colours and graphics on the built-in 1.8&quot; colour display.</p><div class="chips"><a href="pages/5-3-1-glcd.html">glcd</a><a href="pages/5-3-2-colorrgb.html">colorRGB</a><a href="pages/5-3-3-color.html">color[]</a><a href="pages/5-3-4-glcdsetcolorwordbgr.html">glcdSetColorWordBGR</a><a href="pages/5-3-5-glcdsetcolorwordrgb.html">glcdSetColorWordRGB;</a><a href="pages/5-3-6-settextcolor.html">setTextColor</a><a href="pages/5-3-7-settextbackgroundcolor.html">setTextBackgroundColor</a><a href="pages/5-3-8-glcdclear.html">glcdClear</a><a href="pages/5-3-9-glcdfillscreen.html">glcdFillScreen</a><a href="pages/5-3-10-glcdmode.html">glcdMode</a><a href="pages/5-3-11-settextsize.html">setTextSize</a><a href="pages/5-3-12-gettextcolor.html">getTextColor</a><a href="pages/5-3-13-gettextbackgroundcolor.html">getTextBackgroundColor</a><a href="pages/5-3-14-gettextsize.html">getTextSize</a><a href="pages/5-3-15-glcdgetmode.html">glcdGetMode</a><a href="pages/5-3-16-glcdpixel.html">glcdPixel</a><a href="pages/5-3-17-glcdrect.html">glcdRect</a><a href="pages/5-3-18-glcdfillrect.html">glcdFillRect</a><a href="pages/5-3-19-glcdline.html">glcdLine</a><a href="pages/5-3-20-glcdcircle.html">glcdCircle</a><a href="pages/5-3-21-glcdfillcircle.html">glcdFillCircle</a><a href="pages/5-3-22-glcdarc.html">glcdArc</a></div></article>
+</section>
+<section class="allch"><h2>All chapters</h2><ul class="chgrid"><li><a href="pages/chapter-1.html"><b>Chapter 1</b>ATX2 controller board overview</a></li><li><a href="pages/chapter-2.html"><b>Chapter 2</b>Development tools : Arduino IDE</a></li><li><a href="pages/chapter-3.html"><b>Chapter 3</b>Arduino programming</a></li><li><a href="pages/chapter-4.html"><b>Chapter 4</b>ATX2 library</a></li><li><a href="pages/chapter-5.html"><b>Chapter 5</b>ATX2 with GLCD activity</a></li><li><a href="pages/chapter-6.html"><b>Chapter 6</b>Hardware experiment of ATX2 board</a></li></ul><p><a href="about.html">About this edition</a></p></section>
+    <footer class="foot">Web edition of the <em>ATX2 controller board activity book</em> (Robo-Creator2) by Innovative Experiment Co., Ltd. All rights reserved by the publisher.</footer>
+  </main>
+</div>
+<div id="smodal" class="smodal" hidden role="dialog" aria-modal="true" aria-label="Search">
+  <div class="spanel">
+    <input id="sinput" type="search" placeholder="Search the manual: function names, topics, code…" autocomplete="off" aria-label="Search the manual">
+    <ul id="sresults" role="listbox"></ul>
+    <p class="shint"><kbd>&uarr;</kbd> <kbd>&darr;</kbd> to move, <kbd>Enter</kbd> to open, <kbd>Esc</kbd> to close</p>
+  </div>
+</div>
+<script src="assets/nav.js"></script>
+<script src="assets/search-index.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>
